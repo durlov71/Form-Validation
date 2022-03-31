@@ -16,17 +16,16 @@
         <form id="form">
             <div class="form-group">
                 <label for="name">Full name</label>
-                <input id="name" type="text" name="name" placeholder="Full name" required>
+                <input id="name" type="text" name="name" placeholder="Full name" required minlength="3" maxlength="30">
                 </label>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input id="email" type="email" name="email" placeholder="email@gmail.com" required>
-
             </div>
             <div class="form-group">
                 <label for="phone">Phone</label>
-                <input id="phone" type="tel" name="phone" placeholder="00000-000000" required>
+                <input id="phone" type="tel" name="phone" placeholder="00000-000000" pattern="^[0-9]{5}-[0-9]{6}$" required>
 
             </div>
             <div class="form-group">
@@ -36,7 +35,7 @@
             </div>
             <div class="form-group">
                 <label for="password1">Password</label>
-                <input id="password1" type="password" name="password" placeholder="create Password" required>
+                <input id="password1" type="password" name="password" placeholder="create Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Minimum eight characters, at least one uppercase letter, one lowercase letter and one number:">
 
             </div>
             <div class="form-group">
